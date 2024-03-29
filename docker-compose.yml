@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  userservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongoreactive:27017/
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongoreactive
+      - rabbitmqquarkus
+
+  mongoreactive:
+    image: mongo:4.4.6
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  rabbitmqquarkus:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"  # AMQP port
+      - "15672:15672"  # Management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
+volumes:
+  mongodb_data:
+  rabbitmq_data:
