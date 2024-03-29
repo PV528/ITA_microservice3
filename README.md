@@ -9,19 +9,19 @@ Ta projekt uporablja Quarkus, Supersonično Subatomsko Java Ogrodje.
 ## Zagon aplikacije v razvojnem načinu
 
 Aplikacijo lahko zaženete v razvojnem načinu, ki omogoča živo kodiranje s pomočjo:
-```shell script
+
 ./mvnw compile quarkus:dev
 
 ## Čiščenje in izradnja projekta
-```shell script
+
 mvn clean pakage
 
 ## Kontejnerizacija za docker in pogon aplikacije in baze v docker okolju
-```shell script
+
 docker-compose up
 
 ## Vzpostavitev rabbitmq lokalno:
-```shell script
+
 docker run -d --name rabbitmq-management -p 15672:15672 -p 5672:5672 rabbitmq:management 
 
 ## Swagger (docker):
