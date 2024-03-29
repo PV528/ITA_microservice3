@@ -24,7 +24,7 @@ docker-compose up
 docker run -d --name rabbitmq-management -p 15672:15672 -p 5672:5672 rabbitmq:management 
 
 ## Swagger (docker):
-[Swagger]([https://quarkus.io/](http://localhost:8081/q/swagger-ui/#/))
+[Swagger](http://localhost:8081/q/swagger-ui/#/)
 
 
 ## Lastnosti
