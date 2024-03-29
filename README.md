@@ -2,9 +2,8 @@
 Projekt predstavlja sistem za upravljanje uporabnikov. Omogoča uporablja quarkus REST za upravljanje podatkov o uporabnikih. 
 Omogoča pridobivanje, vstavljanje, posodabljanje in brisanje najemov avtomobilov iz sistema. Za shranjevanje podatkov se uporablja MongoDB baza. 
 Sistem je zasnovan kot mikrostoritev, kar omogoča njegovo integracijo v večji sistem upravljanja vozil. Projektu je dodan tudi sporočilni posrednik rabbitmq
-Ta projekt uporablja Quarkus, Supersonično Subatomsko Java Ogrodje.
 
-Če želite izvedeti več o Quarkusu, obiščite spletno stran: [website](https://quarkus.io/).
+Če želite izvedeti več o Quarkusu, obiščite spletno stran: [spletna stran](https://quarkus.io/).
 
 ## Zagon aplikacije v razvojnem načinu
 
@@ -25,7 +24,7 @@ docker-compose up
 docker run -d --name rabbitmq-management -p 15672:15672 -p 5672:5672 rabbitmq:management 
 
 ## Swagger (docker):
-http://localhost:8081/q/swagger-ui/#/User%20Service/get_user__id_
+http://localhost:8081/q/swagger-ui/#/
 
 ## Lastnosti
 + Povezava in trajno shranjevanje podatkov v MongoDB podatkovno bazo.
