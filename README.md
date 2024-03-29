@@ -14,7 +14,7 @@ Aplikacijo lahko zaženete v razvojnem načinu, ki omogoča živo kodiranje s po
 
 ## Čiščenje in izradnja projekta
 
-mvn clean pakage
+mvn clean package
 
 ## Kontejnerizacija za docker in pogon aplikacije in baze v docker okolju
 
