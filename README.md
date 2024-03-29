@@ -23,8 +23,8 @@ docker-compose up
 
 docker run -d --name rabbitmq-management -p 15672:15672 -p 5672:5672 rabbitmq:management 
 
-**## Swagger (docker):
-http://localhost:8081/q/swagger-ui/#/**
+## Swagger (docker):
+**http://localhost:8081/q/swagger-ui/#/**
 
 ## Lastnosti
 + Povezava in trajno shranjevanje podatkov v MongoDB podatkovno bazo.
