@@ -29,6 +29,7 @@ public class UserService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);//za logiranje
 
     @POST
+    @Path("/add")
     public Uni<User> createUser(User user) {
         String hashedPassword = hashPassword(user.getPassword());
         user.setPassword(hashedPassword);
@@ -45,6 +46,7 @@ public class UserService {
         return BCrypt.hashpw(password, salt);
     }
     @GET
+    @Path("/all")
     public Multi<User> getAllUsers() {
         String message = "Metoda getAllUsers klicana.";
         userEmitter.send(message);
